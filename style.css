@@ -7,7 +7,15 @@ body {
   background-color: #FAFAFA;
 }
 
-h1 {}
+h1 {
+  font-weight: inherit;
+  font-size: 50px;
+  text-align: center;
+}
+
+ul {
+  font-weight: inherit;
+}
 
 .mainbox {
   background-color: #FFFFFF;
