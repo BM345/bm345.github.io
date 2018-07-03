@@ -1,3 +1,6 @@
 [submodule "randomdistractorgenerator"]
 	path = randomdistractorgenerator
 	url = https://github.com/BM345/randomdistractorgenerator
+[submodule "textprocessor"]
+	path = textprocessor
+	url = https://github.com/BM345/textprocessor
