@@ -4,3 +4,6 @@
 [submodule "textprocessor"]
 	path = textprocessor
 	url = https://github.com/BM345/textprocessor
+[submodule "CircuitDiagramDrawer"]
+	path = CircuitDiagramDrawer
+	url = https://github.com/BM345/CircuitDiagramDrawer
