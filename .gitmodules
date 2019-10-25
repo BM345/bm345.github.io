@@ -7,3 +7,6 @@
 [submodule "CircuitDiagramDrawer"]
 	path = CircuitDiagramDrawer
 	url = https://github.com/BM345/CircuitDiagramDrawer
+[submodule "mangler"]
+	path = mangler
+	url = https://github.com/BM345/mangler
