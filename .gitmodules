@@ -10,3 +10,6 @@
 [submodule "mangler"]
 	path = mangler
 	url = https://github.com/BM345/mangler
+[submodule "ResponseParsing"]
+	path = ResponseParsing
+	url = https://github.com/BM345/ResponseParsing
