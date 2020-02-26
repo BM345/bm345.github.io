@@ -38,41 +38,302 @@
 
     <section class="whitesection">
         <div class="centrecolumn">
+            <h2>There are <b>two</b> parameters for how to handle leading zeros</h2>
+            <table class="twowaytable">
+                <tr>
+                    <td>
+                        <h3>'Allow Leading Zeros'</h3>
+                    </td>
+                    <td>
+                        <h3>'Remove Leading Zeros'</h3>
+                    </td>
+
+                </tr>
+                <tr>
+                    <td>
+                        &ndash; can be <code>true</code> or <code>false</code>
+                    </td>
+                    <td>
+                        &ndash; can be <code>true</code> or <code>false</code>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        &ndash; set to <code>false</code> by default
+                    </td>
+                    <td>
+                        &ndash; set to <code>false</code> by default
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <p> This parameter determines whether or not students can submit an answer that has leading zeros.
+                        </p>
+                        <p>
+                            If it is set to <code>false</code> for a question, then if a student tries to submit an answer to that question like '0023', they will not be allowed to submit the answer, and will be given the message 'You don't need to write zeros at the start of your answer.'
+                        </p>
+                        <p>
+                            If it is set to <code>true</code>, then a student can submit answers like '023', '0023', '00023', and all will be allowed through.
+                        </p>
+                    </td>
+                    <td>
+                        <p>
+                            Imagine that a student enters '0023' as their answer to a question. (And that 'Allow Leading Zeros' has been set to <code>true</code> for that question.)
+                        </p>
+                        <p>
+                            If 'Remove Leading Zeros' is set to <code>true</code>, then this answer will be converted into '23' before it is compared to the key.
+                        </p>
+                        <p>
+                            This means that even if a student <i>does</i> put leading zeros in their answer, it doesn't matter, because we're going to remove them before checking their answer.
+                        </p>
+                        <p>
+                            If this is set to <code>false</code>, leading zeros won't be removed from the student's answer before it is checked.
+                        </p>
+                    </td>
+                </tr>
+            </table>
+
+        </div>
+    </section>
+
+    <section class="bluesection">
+        <div class="centrecolumn">
             <div class="textcolumn">
-                <h2>There are <b>two</b> parameters for how to handle leading zeros</h2>
-                <table class="twowaytable">
-                    <tr>
-                        <td>
-                            <h3>'Allow Leading Zeros'</h3>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>
-                            can be <code>true</code> or <code>false</code>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>
-                            set to <code>false</code> by default
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>
-                            <p> This parameter determines whether or not students can submit an answer that has leading zeros.
-                            </p>
-                            <p>
-                                If it is set to <code>false</code> for a question, then if a student tries to submit an answer to that question like '0023', they will not be allowed to submit the answer, and will be given the message 'You don't need to write zeros at the start of your answer.'
-                            </p>
-                            <p>
-                                If it is set to <code>true</code>, then a student can submit answers like '023', '0023', '00023', and all will be allowed through.
-                            </p>
-                        </td>
-                    </tr>
+                <h2>Common settings</h2>
+                <p>
+                    The most common set of values that you are likely to want to use for the above two parameters are 
+                </p>
+                <table class="examplestable">
+                   <tr>
+                       <td>'Allow Leading Zeros'</td>
+                       <td><code>true</code></td>
+                   </tr>
+                   <tr>
+                    <td>'Remove Leading Zeros'</td>
+                    <td><code>true</code></td>
+                </tr>
+
                 </table>
+                <p>
+                  This is the "friendliest" or "nicest" setting. A student can type leading zeros in their answer (if they really want to), but they will automatically be removed before their answer is checked. This way, if a student types '0023', but the key is '23', they won't be "told off" and they won't get the question wrong. </p>
+                <p>
+                    Sometimes, however, you might want to encourage the student <i>not</i> to write leading zeros. (This would be particularly useful at lower g-values, because we want to encourage young students to write numbers in the conventional way.) In this case, you could set 'Allow Leading Zeros' to <code>false</code> - then if they try to type '0023', they will be told not to write the leading zeros.
+                </p>
+            </div>
+        </div>
+    </section>
+    <section class="whitesection">
+        <div class="centrecolumn">
+            <div class="textcolumn">
+                <h2>What are trailing zeros?</h2>
+                <p>
+                    A 'trailing zero' is any '0' digit that appears <b>at the end of a number</b> and <b>after the decimal point</b>.
+                </p>
+                <p>
+                    For example
+                </p>
+                <table class="examplestable">
+                    <tr>
+                        <td>1.5<span style="color: hsl(110, 60%, 40%);">00</span></td>
+                        <td>has <b>two</b> trailing zeros</td>
+                    </tr>
+                    <tr>
+                        <td>1.5<span style="color: hsl(110, 60%, 40%);">000</span></td>
+                        <td>has <b>three</b> trailing zeros</td>
+                    </tr>
+                    <tr>
+                        <td>5.<span style="color: hsl(110, 60%, 40%);">0000</span></td>
+                        <td>has <b>four</b> trailing zeros</td>
+                    </tr>
+
+                </table>
+                <p>
+                    But note that
+                </p>
+                <table class="examplestable">
+                    <tr>
+                        <td>1.<span style="color: hsl(30, 60%, 50%);">00</span>5<span style="color: hsl(110, 60%, 40%);">00</span></td>
+                        <td>has only <b>two</b> trailing zeros</td>
+                    </tr>
+                    <tr>
+                        <td>2<span style="color: hsl(30, 60%, 50%);">00</span>.4<span style="color: hsl(110, 60%, 40%);">0</span></td>
+                        <td>has only <b>one</b> trailing zero</td>
+                    </tr>
+                    <tr>
+                        <td>2<span style="color: hsl(30, 60%, 50%);">00</span>.<span style="color: hsl(30, 60%, 50%);">00</span>4<span style="color: hsl(110, 60%, 40%);">0</span></td>
+                        <td>has only <b>one</b> trailing zero</td>
+                    </tr>
+                    <tr>
+                        <td>23<span style="color: hsl(30, 60%, 50%);">000</span></td>
+                        <td>has <b>no</b> trailing zeros</td>
+                    </tr>
+
+                </table>
+                <p>
+                    When numbers are considered to be exact, by convention we don't normally write out any trailing zeros to a number (because the trailing zeros technically go on forever).
+                </p>
             </div>
         </div>
     </section>
 
+    <section class="orangesection">
+        <div class="centrecolumn">
+            <h2>There are <b>two</b> parameters for how to handle trailing zeros</h2>
+            <p>... and they're very similar to the parameters for leading zeros.</p>
+            <table class="twowaytable">
+                <tr>
+                    <td>
+                        <h3>'Allow Trailing Zeros'</h3>
+                    </td>
+                    <td>
+                        <h3>'Remove Trailing Zeros'</h3>
+                    </td>
+
+                </tr>
+                <tr>
+                    <td>
+                        &ndash; can be <code>true</code> or <code>false</code>
+                    </td>
+                    <td>
+                        &ndash; can be <code>true</code> or <code>false</code>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        &ndash; set to <code>true</code> by default
+                    </td>
+                    <td>
+                        &ndash; set to <code>false</code> by default
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <p> This parameter determines whether or not students can submit an answer that has trailing zeros.
+                        </p>
+                        <p>
+                            If it is set to <code>false</code> for a question, then if a student tries to submit an answer to that question like '2.500', they will not be allowed to submit the answer, and will be given the message 'You don't need to write zeros at the end of your answer.'
+                        </p>
+                        <p>
+                            If it is set to <code>true</code>, then a student can submit answers like '2.50', '2.500', '2.5000', and all will be allowed through.
+                        </p>
+                    </td>
+                    <td>
+                        <p>
+                            Imagine that a student enters '2.500' as their answer to a question. (And that 'Allow Trailing Zeros' has been set to <code>true</code> for that question.)
+                        </p>
+                        <p>
+                            If 'Remove Trailing Zeros' is set to <code>true</code>, then this answer will be converted into '2.5' before it is compared to the key.
+                        </p>
+                        <p>
+                            This means that even if a student <i>does</i> put trailing zeros in their answer, it doesn't matter, because we're going to remove them before checking their answer.
+                        </p>
+                        <p>
+                            If this is set to <code>false</code>, trailing zeros won't be removed from the student's answer before it is checked.
+                        </p>
+                    </td>
+                </tr>
+            </table>
+
+        </div>
+    </section>
+    <section class="whitesection">
+        <div class="centrecolumn">
+            <div class="textcolumn">
+                <h2>An exception ...</h2>
+                <p>
+                    Neither of the parameters 'Allow Trailing Zeros' or 'Remove Trailing Zeros' can be set for the <code>currency value</code> primary type. If you try to set them, they will be ignored.
+                </p>
+                <p>
+                    This is because there are often conventions for how currency values are written. For example, in the UK, it's considered incorrect to write '£5.5' - the correct way to write this is '£5.50'.
+
+                </p>
+                <p>
+                    For currency value questions, the key should always be written with two decimal places or no decimal places, and the student will always be told to write their answer to either two decimal places or no decimal places.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <section class="bluesection">
+        <div class="centrecolumn">
+            <div class="textcolumn">
+                <h2>Common settings</h2>
+                <p>
+                    The most common set of values that you are likely to want to use for the above two parameters are 
+                </p>
+                    <table class="examplestable">
+                       <tr>
+                           <td>'Allow Trailing Zeros'</td>
+                           <td><code>true</code></td>
+                       </tr>
+                       <tr>
+                        <td>'Remove Trailing Zeros'</td>
+                        <td><code>true</code></td>
+                    </tr>
+    
+                    </table>
+                    <p>
+                This is the "friendliest" or "nicest" setting. A student can type trailing zeros in their answer (if they really want to), but they will automatically be removed before their answer is checked. This way, if a student types '2.500', but the key is '2.5', they won't be "told off" and they won't get the question wrong. </p>
+            </div>
+        </div>
+    </section>
+
+    <section class="whitesection">
+        <div class="centrecolumn">
+            <div class="textcolumn">
+                <h2>Plus and minus signs</h2>
+                    <p>When we write negative numbers, we always write a minus sign at the start of the number to indicate that it's negative.</p>
+                    <p>
+                        When we write positive numbers, however, by convention we usually don't write a plus sign at the start of the number to indicate that it's positive. If a number is written without a plus or a minus sign, it's taken to be positive.
+                    </p>
+                    <p>
+                        However, writing a positive number with a plus sign is still a valid way of writing a number, even if it's not how we normally write numbers. </p>
+                        <p>Sometimes we may want to encourage a student not to write a plus sign at the start of a positive number (because we want to encourage them to follow the conventional rules for writing numbers). Other times, we may want them to explicitly write the plus sign (for example, when giving relative charges of particles in physics). And sometimes we may want the allow the student to do either, and have their answer marked correct regardless of whether or not it has the plus sign.</p>
+ </div>
+        </div>
+    </section>
+
+    <section class="redsection">
+        <div class="centrecolumn">
+            <h2>There are <b>two</b> parameters for how to handle signs</h2>
+            <table class="twowaytable">
+                <tr>
+                    <td>
+                        <h3>'Sign'</h3>
+                    </td>
+                    <td>
+                        <h3>'Normalize Sign'</h3>
+                    </td>
+
+                </tr>
+                <tr>
+                    <td>
+                        &ndash; can have a value of <code>must be explicit</code>, <code>must be implicit</code>, or <code>can be explicit or implicit</code>
+                    </td>
+                    <td>
+                        &ndash; can be <code>true</code> or <code>false</code>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        &ndash; set to <code>can be explicit or implicit</code> by default
+                    </td>
+                    <td>
+                        &ndash; set to <code>false</code> by default
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                
+                    </td>
+                    <td>
+                    
+                    </td>
+                </tr>
+            </table>
+
+        </div>
+    </section>
 </body>
 
 </html>

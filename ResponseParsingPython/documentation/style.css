@@ -39,10 +39,29 @@ b {
      max-width: 35em;
 }
 
+.whitesection, .redsection , .bluesection ,
+.orangesection {
+     padding: 2em;
+      min-height: 100vh;
+}
+ .redsection , .bluesection ,
+.orangesection {
+      color: white;
+}
+
 .redsection {
      background: linear-gradient(140deg, hsl(350, 60%, 50%), hsl(350, 60%, 40%));
-     color: white;
-     padding: 2em;
+   
+}
+
+.bluesection {
+     background: linear-gradient(140deg, hsl(220, 60%, 50%), hsl(220, 60%, 40%));
+   
+}
+
+.orangesection {
+     background: linear-gradient(140deg, hsl(15, 60%, 50%), hsl(15, 60%, 40%));
+   
 }
 
 .examplestable {
@@ -58,13 +77,37 @@ b {
      text-align: right;
 }
 
+.twowaytable{
+      border-collapse: collapse;
+       margin: 2em 0em 5em 0em;
+
+}
+.twowaytable td{
+     width: 50%;
+      vertical-align: top;
+}
+.twowaytable td:nth-child(1){
+     padding-right: 2em;
+     border-right: 1px solid rgba(0, 0, 0 , 0.15);
+}
+.twowaytable td:nth-child(2){
+     padding-left: 2em;
+      text-align: right;
+}
+
 code {
      display: inline-block;
-     font-family: 'Courier New', Courier, monospace;
-     background-color: #F0F0F0;
-     border: 1px solid #E0E0E0;
-     color: black;
+     font-family: inherit;
+     background-color:  rgba(0, 0, 0, 0.17);
+     border: 1px solid  rgba(0, 0, 0, 0.2);
+     color: inherit;
      border-radius: 2px;
-     padding: 1px 7px;
-     font-weight: normal;
+     padding: 1px 5px;
+     margin: 0px;
+     font-weight: lighter;
+}
+.whitesection code{
+ color: black;
+ background-color:  rgba(0, 0, 0, 0.07);
+ border: 1px solid  rgba(0, 0, 0, 0.1);
 }
