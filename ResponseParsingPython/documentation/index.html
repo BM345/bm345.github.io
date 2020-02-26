@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i&amp;subset=greek,greek-ext,latin-ext" rel="stylesheet">
+
+    <link href="style.css" type="text/css" rel="stylesheet" />
+
+</head>
+
+<body>
+
+    <section class="redsection">
+        <div class="centrecolumn">
+            <div class="textcolumn">
+                <h2>What are leading zeros?</h2>
+                <p>A 'leading zero' is any '0' digit that appears at the start of a number.</p>
+                <p>For example</p>
+                <table class="examplestable">
+                    <tr>
+                        <td>0023</td>
+                        <td>has <b>two</b> leading zeros</td>
+                    </tr>
+                    <tr>
+                        <td>00023</td>
+                        <td>has <b>three</b> leading zeros</td>
+                    </tr>
+                    <tr>
+                        <td>23</td>
+                        <td>has <b>no</b> leading zeros</td>
+                    </tr>
+                </table>
+                <p>All of the above are valid ways of writing the number 23. Most of the time we would never write '0023' or '00023', but all of the above <i>technically</i> represent the number 23. If the answer to a question were 23, but the student gives their answer as '0023', they are still correct. </p>
+            </div>
+        </div>
+    </section>
+
+    <section class="whitesection">
+        <div class="centrecolumn">
+            <div class="textcolumn">
+                <h2>There are <b>two</b> parameters for how to handle leading zeros</h2>
+                <table class="twowaytable">
+                    <tr>
+                        <td>
+                            <h3>'Allow Leading Zeros'</h3>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            can be <code>true</code> or <code>false</code>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            set to <code>false</code> by default
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <p> This parameter determines whether or not students can submit an answer that has leading zeros.
+                            </p>
+                            <p>
+                                If it is set to <code>false</code> for a question, then if a student tries to submit an answer to that question like '0023', they will not be allowed to submit the answer, and will be given the message 'You don't need to write zeros at the start of your answer.'
+                            </p>
+                            <p>
+                                If it is set to <code>true</code>, then a student can submit answers like '023', '0023', '00023', and all will be allowed through.
+                            </p>
+                        </td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+    </section>
+
+</body>
+
+</html>
