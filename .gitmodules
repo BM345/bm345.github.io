@@ -13,3 +13,6 @@
 [submodule "ResponseParsing"]
 	path = ResponseParsing
 	url = https://github.com/BM345/ResponseParsing
+[submodule "NagwaDocumentation"]
+	path = NagwaDocumentation
+	url = https://github.com/BM345/NagwaDocumentation
