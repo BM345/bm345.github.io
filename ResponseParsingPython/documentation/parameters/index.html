@@ -3,7 +3,9 @@
 
 <head>
 
-    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i&amp;subset=greek,greek-ext,latin-ext" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i&amp;subset=greek,greek-ext,latin-ext"
+        rel="stylesheet">
 
     <link href="style.css" type="text/css" rel="stylesheet" />
 
@@ -20,11 +22,15 @@
                 <p>
                     This document describes the validation parameters that are used in Nagwa content.</p>
                 <p>
-                    Validation parameters are a set of parameters that determine how a student must write their answer for a given question.</p>
+                    Validation parameters are a set of parameters that determine how a student must write their answer
+                    for a given question.</p>
                 <p>
-                    Validation parameters often deal with <i>different ways of writing the same thing</i>. For example, '23' and '023' are different ways of writing the same number, and we may want to accept both of them as the right answer to a question.</p>
+                    Validation parameters often deal with <i>different ways of writing the same thing</i>. For example,
+                    '23' and '023' are different ways of writing the same number, and we may want to accept both of them
+                    as the right answer to a question.</p>
                 <p>
-                    Different parameter values can be set for each question. While most of the time you will probably want to use the default value of each parameter, sometimes you will want to change them.
+                    Different parameter values can be set for each question. While most of the time you will probably
+                    want to use the default value of each parameter, sometimes you will want to change them.
                 </p>
                 <p>
                     This document describes what the different values are, and what effect they have.
@@ -87,10 +93,13 @@
                     Each question expects an answer of a certain <i>primary type</i>.
                 </p>
                 <p>
-                    The <i>primary type</i> of an answer is what <i>kind</i> of mathematical expression it is. Some examples are: an integer, a decimal, a fraction, a surd, a complex number, an inequality, a single word, et c.
+                    The <i>primary type</i> of an answer is what <i>kind</i> of mathematical expression it is. Some
+                    examples are: an integer, a decimal, a fraction, a surd, a complex number, an inequality, a single
+                    word, et c.
                 </p>
                 <p>
-                    At the moment, there are validation parameters for <b>four</b> primary types, but more primary types will be added in future.
+                    At the moment, there are validation parameters for <b>four</b> primary types, but more primary types
+                    will be added in future.
                 </p>
             </div>
 
@@ -174,22 +183,32 @@
 
             <div class="textcolumn">
                 <p>
-                    The primary type affects what parameters can be set for a question. For example, a parameter that can be set for the decimal type is 'Must have exactly n decimal places', which requires the student to give an answer that has n decimal places, but this parameter obviously can't be set for the integer type, because integers have no decimal places.
+                    The primary type affects what parameters can be set for a question. For example, a parameter that
+                    can be set for the decimal type is 'Must have exactly n decimal places', which requires the student
+                    to give an answer that has n decimal places, but this parameter obviously can't be set for the
+                    integer type, because integers have no decimal places.
                 </p>
                 <p class="bigalert">
-                    NOTE: There are many questions in our content that have answers like '9.6 km/s' or '12 mph' (i.e., a number with a unit after it). This is common in mechanics content in maths, and of course throughout physics. Although these keys have integers and decimals <i>as part of them</i>, they <b>should not</b> be set to the integer or decimal answer types. The integer and decimal answer types are only for questions where the answer is an integer or decimal <b>ONLY</b>. Anything else must have the answer type 'none'. This validation system has so far only been designed to cover a small number of maths questions. The majority of the questions in our content will (for now) have an answer type of 'none', as they are not covered by the validation code.
-                    <br />
-                    <br />
-                    Examples of where the answer type should be 'none':
-                    <ul>
-                        <li>12 m/s</li>
-                        <li>8.4 km/s</li>
-                        <li>45º</li>
-                        <li>6 meters</li>
-                        <li>2.7 &times; 10<sup>-4</sup></li>
-                        <li>1.89 &times; 10<sup>22</sup> m/s</li>
-                    </ul>
+                    NOTE: There are many questions in our content that have answers like '9.6 km/s' or '12 mph' (i.e., a
+                    number with a unit after it). This is common in mechanics content in maths, and of course throughout
+                    physics. Although these keys have integers and decimals <i>as part of them</i>, they <b>should
+                        not</b> be set to the integer or decimal answer types. The integer and decimal answer types are
+                    only for questions where the answer is an integer or decimal <b>ONLY</b>. Anything else must have
+                    the answer type 'none'. This validation system has so far only been designed to cover a small number
+                    of maths questions. The majority of the questions in our content will (for now) have an answer type
+                    of 'none', as they are not covered by the validation code.
                 </p>
+                <p>
+                    Examples of where the answer type should be 'none':
+                </p>
+                <ul>
+                    <li>12 m/s</li>
+                    <li>8.4 km/s</li>
+                    <li>45º</li>
+                    <li>6 meters</li>
+                    <li>2.7 &times; 10<sup>-4</sup></li>
+                    <li>1.89 &times; 10<sup>22</sup> m/s</li>
+                </ul>
                 <p><a href="#toc">&uarr; Back to the table of contents</a></p>
             </div>
         </div>
@@ -220,7 +239,9 @@
                     </tr>
                 </table>
                 <p>
-                    All of the above are valid ways of writing the number 23. Most of the time we would never write '0023' or '00023', but all of the above <i>technically</i> represent the number 23. If the answer to a question were 23, but the student gives their answer as '0023', they are still correct. </p>
+                    All of the above are valid ways of writing the number 23. Most of the time we would never write
+                    '0023' or '00023', but all of the above <i>technically</i> represent the number 23. If the answer to
+                    a question were 23, but the student gives their answer as '0023', they are still correct. </p>
 
                 <p><a href="#toc">&uarr; Back to the table of contents</a></p>
             </div>
@@ -260,27 +281,35 @@
                 <tr>
                     <td>
                         <p>
-                            This parameter determines whether or not a student can submit an answer that has leading zeros.
+                            This parameter determines whether or not a student can submit an answer that has leading
+                            zeros.
                         </p>
                         <p>
-                            If it is set to <code>false</code> for a question, then if a student tries to submit an answer to that question like '0023', they will not be allowed to submit the answer, and will be given the message 'You don't need to write zeros at the start of your answer.'
+                            If it is set to <code>false</code> for a question, then if a student tries to submit an
+                            answer to that question like '0023', they will not be allowed to submit the answer, and will
+                            be given the message 'You don't need to write zeros at the start of your answer.'
                         </p>
                         <p>
-                            If it is set to <code>true</code>, then a student can submit answers like '023', '0023', '00023', and all will be allowed through.
+                            If it is set to <code>true</code>, then a student can submit answers like '023', '0023',
+                            '00023', and all will be allowed through.
                         </p>
                     </td>
                     <td>
                         <p>
-                            Imagine that a student enters '0023' as their answer to a question. (And that 'Allow Leading Zeros' has been set to <code>true</code> for that question.)
+                            Imagine that a student enters '0023' as their answer to a question. (And that 'Allow Leading
+                            Zeros' has been set to <code>true</code> for that question.)
                         </p>
                         <p>
-                            If 'Remove Leading Zeros' is set to <code>true</code>, then this answer will be converted into '23' before it is compared to the key.
+                            If 'Remove Leading Zeros' is set to <code>true</code>, then this answer will be converted
+                            into '23' before it is compared to the key.
                         </p>
                         <p>
-                            This means that even if a student <i>does</i> put leading zeros in their answer, it doesn't matter, because we're going to remove them before checking their answer.
+                            This means that even if a student <i>does</i> put leading zeros in their answer, it doesn't
+                            matter, because we're going to remove them before checking their answer.
                         </p>
                         <p>
-                            If this is set to <code>false</code>, leading zeros won't be removed from the student's answer before it is checked.
+                            If this is set to <code>false</code>, leading zeros won't be removed from the student's
+                            answer before it is checked.
                         </p>
                     </td>
                 </tr>
@@ -357,10 +386,17 @@
                     </tr>
                 </table>
                 <p>
-                    This is the "friendliest" or "nicest" setting. A student can type leading zeros in their answer (if they really want to), but they will automatically be removed before their answer is checked. This way, if a student types '0023', but the key is '23', they won't be "told off" and they won't get the question wrong.
+                    This is the "friendliest" or "nicest" setting. A student can type leading zeros in their answer (if
+                    they really want to), but they will automatically be removed before their answer is checked. This
+                    way, if a student types '0023', but the key is '23', they won't be "told off" and they won't get the
+                    question wrong.
                 </p>
                 <p>
-                    Sometimes, however, you might want to encourage the student <i>not</i> to write leading zeros. (This would be particularly useful at lower g-values, because we want to encourage young students to write numbers in the conventional way.) In this case, you could set 'Allow Leading Zeros' to <code>false</code> - then if they try to type '0023', they will be told not to write the leading zeros.
+                    Sometimes, however, you might want to encourage the student <i>not</i> to write leading zeros. (This
+                    would be particularly useful at lower g-values, because we want to encourage young students to write
+                    numbers in the conventional way.) In this case, you could set 'Allow Leading Zeros' to
+                    <code>false</code> - then if they try to type '0023', they will be told not to write the leading
+                    zeros.
                 </p>
                 <p><a href="#toc">&uarr; Back to the table of contents</a></p>
             </div>
@@ -374,7 +410,8 @@
             <div class="textcolumn">
                 <h2>An exception ...</h2>
                 <p>
-                    There is one case where most of the time we <i>do</i> want a student to write a leading zero, and that's with decimals between &minus;1 and 1.
+                    There is one case where most of the time we <i>do</i> want a student to write a leading zero, and
+                    that's with decimals between &minus;1 and 1.
                 </p>
                 <table class="examplestable">
                     <tr>
@@ -391,13 +428,16 @@
                     </tr>
                 </table>
                 <p>
-                    All of the above numbers have <b>one</b> leading zero, and this is generally the preferred way of writing decimals between &minus;1 and 1.
+                    All of the above numbers have <b>one</b> leading zero, and this is generally the preferred way of
+                    writing decimals between &minus;1 and 1.
                 </p>
                 <p>
-                    Even if 'Allow Leading Zeros' is set to <code>false</code>, students will still be allowed to submit decimals of the form '0._____'. (The leading zero is thought of as a 'phantom' zero.)
+                    Even if 'Allow Leading Zeros' is set to <code>false</code>, students will still be allowed to submit
+                    decimals of the form '0._____'. (The leading zero is thought of as a 'phantom' zero.)
                 </p>
                 <p>
-                    However, there is a parameter to control whether this zero will be added to a student's answer (if they haven't written it), before their answer is checked against the key.
+                    However, there is a parameter to control whether this zero will be added to a student's answer (if
+                    they haven't written it), before their answer is checked against the key.
                 </p>
                 <h3>'Add a single leading zero to decimals smaller than 1'</h3>
                 <p>
@@ -407,10 +447,12 @@
                     It is set to <code>true</code> by default.
                 </p>
                 <p>
-                    If set to <code>true</code>, when a student enters something like '.12' as their answer, it will automatically have a zero added to the front of it, making it '0.12'.
+                    If set to <code>true</code>, when a student enters something like '.12' as their answer, it will
+                    automatically have a zero added to the front of it, making it '0.12'.
                 </p>
                 <p>
-                    If set to <code>false</code>, when a student enters something like '.12' as their answer, no leading zero will be added to it.
+                    If set to <code>false</code>, when a student enters something like '.12' as their answer, no leading
+                    zero will be added to it.
                 </p>
                 <p><a href="#toc">&uarr; Back to the table of contents</a></p>
             </div>
@@ -424,7 +466,8 @@
             <div class="textcolumn">
                 <h2>What are trailing zeros?</h2>
                 <p>
-                    A 'trailing zero' is any '0' digit that appears <b>at the end of a number</b> and <b>after the decimal point</b>.
+                    A 'trailing zero' is any '0' digit that appears <b>at the end of a number</b> and <b>after the
+                        decimal point</b>.
                 </p>
                 <p>
                     For example
@@ -448,15 +491,19 @@
                 </p>
                 <table class="examplestable">
                     <tr>
-                        <td>1.<span style="color: hsl(30, 60%, 50%);">00</span>5<span style="color: hsl(110, 60%, 40%);">00</span></td>
+                        <td>1.<span style="color: hsl(30, 60%, 50%);">00</span>5<span
+                                style="color: hsl(110, 60%, 40%);">00</span></td>
                         <td>has only <b>two</b> trailing zeros</td>
                     </tr>
                     <tr>
-                        <td>2<span style="color: hsl(30, 60%, 50%);">00</span>.4<span style="color: hsl(110, 60%, 40%);">0</span></td>
+                        <td>2<span style="color: hsl(30, 60%, 50%);">00</span>.4<span
+                                style="color: hsl(110, 60%, 40%);">0</span></td>
                         <td>has only <b>one</b> trailing zero</td>
                     </tr>
                     <tr>
-                        <td>2<span style="color: hsl(30, 60%, 50%);">00</span>.<span style="color: hsl(30, 60%, 50%);">00</span>4<span style="color: hsl(110, 60%, 40%);">0</span></td>
+                        <td>2<span style="color: hsl(30, 60%, 50%);">00</span>.<span
+                                style="color: hsl(30, 60%, 50%);">00</span>4<span
+                                style="color: hsl(110, 60%, 40%);">0</span></td>
                         <td>has only <b>one</b> trailing zero</td>
                     </tr>
                     <tr>
@@ -465,10 +512,13 @@
                     </tr>
                 </table>
                 <p>
-                    When numbers are considered to be exact, by convention we don't normally write out any trailing zeros to a number (because the trailing zeros technically go on forever).
+                    When numbers are considered to be exact, by convention we don't normally write out any trailing
+                    zeros to a number (because the trailing zeros technically go on forever).
                 </p>
                 <p>
-                    Note that while the leading zeros parameters can be applied to all four of the current primary types, the trailing zeros parameters can only be applied to the decimal type. (Integers don't have trailing zeros.)
+                    Note that while the leading zeros parameters can be applied to all four of the current primary
+                    types, the trailing zeros parameters can only be applied to the decimal type. (Integers don't have
+                    trailing zeros.)
                 </p>
                 <p><a href="#toc">&uarr; Back to the table of contents</a></p>
             </div>
@@ -509,27 +559,35 @@
                 <tr>
                     <td>
                         <p>
-                            This parameter determines whether or not students can submit an answer that has trailing zeros.
+                            This parameter determines whether or not students can submit an answer that has trailing
+                            zeros.
                         </p>
                         <p>
-                            If it is set to <code>false</code> for a question, then if a student tries to submit an answer to that question like '2.500', they will not be allowed to submit the answer, and will be given the message 'You don't need to write zeros at the end of your answer.'
+                            If it is set to <code>false</code> for a question, then if a student tries to submit an
+                            answer to that question like '2.500', they will not be allowed to submit the answer, and
+                            will be given the message 'You don't need to write zeros at the end of your answer.'
                         </p>
                         <p>
-                            If it is set to <code>true</code>, then a student can submit answers like '2.50', '2.500', '2.5000', and all will be allowed through.
+                            If it is set to <code>true</code>, then a student can submit answers like '2.50', '2.500',
+                            '2.5000', and all will be allowed through.
                         </p>
                     </td>
                     <td>
                         <p>
-                            Imagine that a student enters '2.500' as their answer to a question. (And that 'Allow Trailing Zeros' has been set to <code>true</code> for that question.)
+                            Imagine that a student enters '2.500' as their answer to a question. (And that 'Allow
+                            Trailing Zeros' has been set to <code>true</code> for that question.)
                         </p>
                         <p>
-                            If 'Remove Trailing Zeros' is set to <code>true</code>, then this answer will be converted into '2.5' before it is compared to the key.
+                            If 'Remove Trailing Zeros' is set to <code>true</code>, then this answer will be converted
+                            into '2.5' before it is compared to the key.
                         </p>
                         <p>
-                            This means that even if a student <i>does</i> put trailing zeros in their answer, it doesn't matter, because we're going to remove them before checking their answer.
+                            This means that even if a student <i>does</i> put trailing zeros in their answer, it doesn't
+                            matter, because we're going to remove them before checking their answer.
                         </p>
                         <p>
-                            If this is set to <code>false</code>, trailing zeros won't be removed from the student's answer before it is checked.
+                            If this is set to <code>false</code>, trailing zeros won't be removed from the student's
+                            answer before it is checked.
                         </p>
                     </td>
                 </tr>
@@ -601,16 +659,23 @@
             <div class="textcolumn">
                 <h2>An odd case ...</h2>
                 <p>
-                    What happens if a student types in something like '12.' as their answer - i.e., a decimal with no numbers after the decimal point?
+                    What happens if a student types in something like '12.' as their answer - i.e., a decimal with no
+                    numbers after the decimal point?
                 </p>
                 <p>
-                    An answer like this <b>is</b> considered a valid decimal. But perhaps the key is just '12' - in this case neither the 'Allow Trailing Zeros' nor the 'Remove Trailing Zeros' will have any effect on the student's answer - because there are no trailing zeros.
+                    An answer like this <b>is</b> considered a valid decimal. But perhaps the key is just '12' - in this
+                    case neither the 'Allow Trailing Zeros' nor the 'Remove Trailing Zeros' will have any effect on the
+                    student's answer - because there are no trailing zeros.
                 </p>
                 <p>
-                    There is a special parameter for removing this trailing decimal point before the student's answer is compared to the key. This parameter is called 'Remove Trailing Decimal Point'. It can take a value of <code>true</code> or <code>false</code>. If <code>true</code>, '12.' would be changed to '12'. If false, '12.' would not be changed. It is set to <code>true</code> by default.
+                    There is a special parameter for removing this trailing decimal point before the student's answer is
+                    compared to the key. This parameter is called 'Remove Trailing Decimal Point'. It can take a value
+                    of <code>true</code> or <code>false</code>. If <code>true</code>, '12.' would be changed to '12'. If
+                    false, '12.' would not be changed. It is set to <code>true</code> by default.
                 </p>
                 <p>
-                    It would be very unusual to ever need to change this parameter - most of the time we don't want students to write something like '12.' (there are only a few cases where we might).
+                    It would be very unusual to ever need to change this parameter - most of the time we don't want
+                    students to write something like '12.' (there are only a few cases where we might).
                 </p>
 
                 <p><a href="#toc">&uarr; Back to the table of contents</a></p>
@@ -638,7 +703,10 @@
                     </tr>
                 </table>
                 <p>
-                    This is the "friendliest" or "nicest" setting. A student can type trailing zeros in their answer (if they really want to), but they will automatically be removed before their answer is checked. This way, if a student types '2.500', but the key is '2.5', they won't be "told off" and they won't get the question wrong.
+                    This is the "friendliest" or "nicest" setting. A student can type trailing zeros in their answer (if
+                    they really want to), but they will automatically be removed before their answer is checked. This
+                    way, if a student types '2.500', but the key is '2.5', they won't be "told off" and they won't get
+                    the question wrong.
                 </p>
 
                 <p><a href="#toc">&uarr; Back to the table of contents</a></p>
@@ -653,16 +721,24 @@
             <div class="textcolumn">
                 <h2>Plus and minus signs</h2>
                 <p>
-                    When we write negative numbers, we always write a minus sign at the start of the number to indicate that it's negative.
+                    When we write negative numbers, we always write a minus sign at the start of the number to indicate
+                    that it's negative.
                 </p>
                 <p>
-                    When we write positive numbers, however, by convention we usually don't write a plus sign at the start of the number to indicate that it's positive. If a number is written without a plus or a minus sign, it's taken to be positive.
+                    When we write positive numbers, however, by convention we usually don't write a plus sign at the
+                    start of the number to indicate that it's positive. If a number is written without a plus or a minus
+                    sign, it's taken to be positive.
                 </p>
                 <p>
-                    However, writing a positive number with a plus sign is still a valid way of writing a number, even if it's not how we normally write numbers.
+                    However, writing a positive number with a plus sign is still a valid way of writing a number, even
+                    if it's not how we normally write numbers.
                 </p>
                 <p>
-                    Sometimes we may want to encourage a student not to write a plus sign at the start of a positive number (because we want to encourage them to follow the conventional rules for writing numbers). Other times, we may want them to explicitly write the plus sign (for example, when giving relative charges of particles in physics). And sometimes we may want the allow the student to do either, and have their answer marked correct regardless of whether or not it has the plus sign.
+                    Sometimes we may want to encourage a student not to write a plus sign at the start of a positive
+                    number (because we want to encourage them to follow the conventional rules for writing numbers).
+                    Other times, we may want them to explicitly write the plus sign (for example, when giving relative
+                    charges of particles in physics). And sometimes we may want the allow the student to do either, and
+                    have their answer marked correct regardless of whether or not it has the plus sign.
                 </p>
 
                 <p><a href="#toc">&uarr; Back to the table of contents</a></p>
@@ -686,10 +762,12 @@
                 </tr>
                 <tr>
                     <td>
-                        &ndash; can have a value of <code>must be explicit</code>, <code>must be implicit</code>, or <code>can be explicit or implicit</code>
+                        &ndash; can have a value of <code>must be explicit</code>, <code>must be implicit</code>, or
+                        <code>can be explicit or implicit</code>
                     </td>
                     <td>
-                        &ndash; can have a value of <code>make explicit</code>, <code>make implicit</code>, or <code>do nothing</code>
+                        &ndash; can have a value of <code>make explicit</code>, <code>make implicit</code>, or
+                        <code>do nothing</code>
                     </td>
                 </tr>
                 <tr>
@@ -706,13 +784,18 @@
                             This parameter determines how a student is allowed to write their answer.
                         </p>
                         <p>
-                            If it's set to <code>must be explicit</code>, and if a student gives a positive number as their answer to a question, then it <b>must</b> have a plus sign at the start of it. If it doesn't, they will be given a message telling them to add a plus sign.
+                            If it's set to <code>must be explicit</code>, and if a student gives a positive number as
+                            their answer to a question, then it <b>must</b> have a plus sign at the start of it. If it
+                            doesn't, they will be given a message telling them to add a plus sign.
                         </p>
                         <p>
-                            If it's set to <code>must be implicit</code>, and if a student gives a positive number as their answer to a question, then it <b>must not</b> have a plus sign at the start of it. If it does, they will be given a message telling them to remove it.
+                            If it's set to <code>must be implicit</code>, and if a student gives a positive number as
+                            their answer to a question, then it <b>must not</b> have a plus sign at the start of it. If
+                            it does, they will be given a message telling them to remove it.
                         </p>
                         <p>
-                            If it's set to <code>can be explicit or implicit</code>, then a student will be allowed to submit a positive-number answer with or without a plus sign.
+                            If it's set to <code>can be explicit or implicit</code>, then a student will be allowed to
+                            submit a positive-number answer with or without a plus sign.
                         </p>
                         <p>
                             If the student gives a negative-number answer, this parameter has no effect.
@@ -720,16 +803,20 @@
                     </td>
                     <td>
                         <p>
-                            This parameter determines whether or not a plus sign will be added to or removed from a student's answer before it is checked against the key.
+                            This parameter determines whether or not a plus sign will be added to or removed from a
+                            student's answer before it is checked against the key.
                         </p>
                         <p>
-                            If it's set to <code>make explicit</code>, and a student submits a positive-number answer without a plus sign, then a plus sign will be added before the answer is checked.
+                            If it's set to <code>make explicit</code>, and a student submits a positive-number answer
+                            without a plus sign, then a plus sign will be added before the answer is checked.
                         </p>
                         <p>
-                            If it's set to <code>make implicit</code>, and a student submits a positive-number answer with a plus sign, then the plus sign will be removed before the answer is checked.
+                            If it's set to <code>make implicit</code>, and a student submits a positive-number answer
+                            with a plus sign, then the plus sign will be removed before the answer is checked.
                         </p>
                         <p>
-                            If it's set to <code>do nothing</code>, no plus sign will be added to or removed from the student's answer before it is checked.
+                            If it's set to <code>do nothing</code>, no plus sign will be added to or removed from the
+                            student's answer before it is checked.
                         </p>
                         <p>
                             If the student gives a negative-number answer, this parameter has no effect.
@@ -852,13 +939,16 @@
                 </tr>
                 <tr>
                     <td>
-                        <p>The student will only be able to submit their answer if it has at least <i>n</i> decimal places.</p>
+                        <p>The student will only be able to submit their answer if it has at least <i>n</i> decimal
+                            places.</p>
                     </td>
                     <td>
-                        <p>The student will only be able to submit their answer if it has no more than <i>n</i> decimal places.</p>
+                        <p>The student will only be able to submit their answer if it has no more than <i>n</i> decimal
+                            places.</p>
                     </td>
                     <td>
-                        <p>The student will only be able to submit their answer if it has exactly <i>n</i> decimal places.</p>
+                        <p>The student will only be able to submit their answer if it has exactly <i>n</i> decimal
+                            places.</p>
                     </td>
                 </tr>
             </table>
@@ -877,7 +967,10 @@
                     For any given question, it is possible to set more than one of the above three parameters.
                 </p>
                 <p>
-                    This can create conflicts. For example, 'Must have at least <i>n</i> decimal places' could be set to '4', while 'Must have exactly <i>n</i> decimal places' is set to '2'. In such a scenario, both constraints would be applied, meaning that the student would not be able to answer the question. It is therefore very important to avoid accidentally choosing values like this.
+                    This can create conflicts. For example, 'Must have at least <i>n</i> decimal places' could be set to
+                    '4', while 'Must have exactly <i>n</i> decimal places' is set to '2'. In such a scenario, both
+                    constraints would be applied, meaning that the student would not be able to answer the question. It
+                    is therefore very important to avoid accidentally choosing values like this.
                 </p>
 
                 <p><a href="#toc">&uarr; Back to the table of contents</a></p>
@@ -894,7 +987,8 @@
                 These are also fairly self-explanatory.
             </p>
             <p>
-                These can be set for the <code>integer</code>, <code>non-negative integer</code>, and <code>decimal</code> types.
+                These can be set for the <code>integer</code>, <code>non-negative integer</code>, and
+                <code>decimal</code> types.
             </p>
             <table class="threewaytable">
                 <tr>
@@ -920,13 +1014,16 @@
                 </tr>
                 <tr>
                     <td>
-                        <p>The student will only be able to submit their answer if it has at least <i>n</i> significant figures.</p>
+                        <p>The student will only be able to submit their answer if it has at least <i>n</i> significant
+                            figures.</p>
                     </td>
                     <td>
-                        <p>The student will only be able to submit their answer if it has no more than <i>n</i> significant figures.</p>
+                        <p>The student will only be able to submit their answer if it has no more than <i>n</i>
+                            significant figures.</p>
                     </td>
                     <td>
-                        <p>The student will only be able to submit their answer if it has exactly <i>n</i> significant figures.</p>
+                        <p>The student will only be able to submit their answer if it has exactly <i>n</i> significant
+                            figures.</p>
                     </td>
                 </tr>
             </table>
@@ -942,13 +1039,20 @@
             <div class="textcolumn">
                 <h2>Currency Values</h2>
                 <p>
-                    The <code>currency value</code> primary type is a 'special case' of the <code>decimal</code> primary type.
+                    The <code>currency value</code> primary type is a 'special case' of the <code>decimal</code> primary
+                    type.
                 </p>
                 <p>
-                    For each country and each currency, there are usually conventions for how to write values of that currency. For example, in the UK, we generally don't write '£12.5' or '£12.500' - we would always write '£12.50'. So the <code>currency value</code> type is like the <code>decimal</code> type, but with some extra limitations.
+                    For each country and each currency, there are usually conventions for how to write values of that
+                    currency. For example, in the UK, we generally don't write '£12.5' or '£12.500' - we would always
+                    write '£12.50'. So the <code>currency value</code> type is like the <code>decimal</code> type, but
+                    with some extra limitations.
                 </p>
                 <p>
-                    The main limitations are around the number of decimal places that must be given for a currency value. For example, if the currency is set to GBP (UK pounds), any answer must be given to zero or two decimal places - if the student tries to submit anything else, they will not be able to submit their answer.
+                    The main limitations are around the number of decimal places that must be given for a currency
+                    value. For example, if the currency is set to GBP (UK pounds), any answer must be given to zero or
+                    two decimal places - if the student tries to submit anything else, they will not be able to submit
+                    their answer.
                 </p>
                 <h3>Which currencies are supported?</h3>
                 <p>
@@ -984,13 +1088,17 @@
                 </p>
 
                 <p>
-                    'Must have at least n decimal places', 'Must have no more than n decimal places', and 'Must have exactly n decimal places' cannot be applied, as these would conflict with the in-built decimal place constraints for each currency. If these parameters are set for a currency value question, they will be ignored.
+                    'Must have at least n decimal places', 'Must have no more than n decimal places', and 'Must have
+                    exactly n decimal places' cannot be applied, as these would conflict with the in-built decimal place
+                    constraints for each currency. If these parameters are set for a currency value question, they will
+                    be ignored.
                 </p>
                 <p>
                     The significant figure parameters also can't be applied for the same reason.
                 </p>
                 <p>
-                    And the two trailing zero parameters cannot be applied. This is because something like '£12.50', even though it has a trailing zero, is always a valid way of writing this currency value.
+                    And the two trailing zero parameters cannot be applied. This is because something like '£12.50',
+                    even though it has a trailing zero, is always a valid way of writing this currency value.
                 </p>
 
                 <p><a href="#toc">&uarr; Back to the table of contents</a></p>
