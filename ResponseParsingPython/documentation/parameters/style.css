@@ -164,6 +164,12 @@ a:hover {
      background: linear-gradient(140deg, hsl(250, 60%, 50%), hsl(250, 60%, 40%));
 }
 
+.bigalert {
+     border: 1px solid hsl(350, 60%, 50%);
+     border-radius: 2px;
+     padding: 1em;
+}
+
 .examplestable, .exampleslist {
      border-collapse: collapse;
      margin: 1.5em auto;
